@@ -42,5 +42,5 @@ ee_status = EE_Write(&eeprom, 0x100, &data_to_flash);
 
 Читаем данные из адреса 0x100
 ```
-ee_status = EE_Read(&eeprom, 0x12345, &data_from_flash);
+ee_status = EE_Read(&eeprom, 0x100, &data_from_flash);
 ```
