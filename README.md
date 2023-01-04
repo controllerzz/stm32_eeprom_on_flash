@@ -17,7 +17,7 @@ eeprom_status_t ee_status;
 eeprom_config_t eeprom;
 ```
 
-Задаем адреса и размеры страниц для EEPROM\
+Задаем адреса и размеры страниц для EEPROM
 ```
 eeprom.page0_addr = 0x0801F000;
 eeprom.page0_size = 0x800;
@@ -35,12 +35,12 @@ if(ee_status != EEPROM_RET_OK)
 }
 ```
 
-Записываем данные по ардесу 0x100
+Записываем данные по адресу 0x100
 ```
-EE_Write(&eeprom, 0x100, &data_to_flash);
+ee_status = EE_Write(&eeprom, 0x100, &data_to_flash);
 ```
 
 Читаем данные из адреса 0x100
 ```
-EE_Read(&eeprom, 0x12345, &data_from_flash);
+ee_status = EE_Read(&eeprom, 0x12345, &data_from_flash);
 ```
